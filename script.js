@@ -99,3 +99,8 @@ function nextbtn() {
   nextButton.style.display = "none";
   hurray.style.display = "flex";
 }
+function restart() {
+    fullgame.style.display = "flex";
+  nextButton.style.display = "flex";
+  hurray.style.display = "none";
+}
