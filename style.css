@@ -1,0 +1,314 @@
+body {
+  background-color: #8cc461;
+  justify-content: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+/* #scorecard {
+  border: solid;
+  border-radius: 25px;
+  border-color: aliceblue;
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 50px;
+  margin-top: 2em;
+  color: white;
+  letter-spacing: 2px;
+} */
+.rulesbtn {
+  float: inline-end;
+  margin: 15px;
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: #8cc461;
+  color: white;
+  border: solid;
+  font-size: 24px;
+  padding: 8px 20px;
+  letter-spacing: 2px;
+}
+#scorebox {
+  display: flex;
+}
+.score {
+  background-color: white;
+  color: gray;
+  border-radius: 15px;
+  font-size: 16px;
+  padding: 15px;
+  margin: 25px;
+  width: 130px;
+  height: 128px;
+  display: grid;
+  text-align: center;
+}
+#rules {
+  list-style-type: square;
+  position: fixed;
+  bottom: 90px;
+  right: 30px;
+  width: 250px;
+  background-color: #004429;
+  color: white;
+  padding: 25px;
+  border: white solid 5px;
+  border-radius: 10px;
+  padding-left: 28px;
+  align-self: center;
+  display: none;
+}
+#rulesclosebtn {
+  width: 50px;
+  background-color: white;
+  height: 50px;
+  border-radius: 50%;
+  border: solid white 5px;
+  position: fixed;
+  bottom: 450px;
+  right: 20px;
+  background-color: red;
+  color: white;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+#rock {
+  width: 100px;
+  background-color: white;
+  height: 100px;
+  border-radius: 50%;
+  border: solid rgb(165, 15, 15) 15px;
+  position: absolute;
+  bottom: 400px;
+  right: 750px;
+  color: white;
+  font-size: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+#line1 {
+  width: 5px;
+  height: 300px;
+  background-color: gray;
+  transform: rotate(90deg);
+  position: fixed;
+  bottom: 50px;
+}
+#line2 {
+  width: 5px;
+  height: 300px;
+  background-color: gray;
+  transform: rotate(30deg);
+  position: fixed;
+  bottom: 150px;
+  left: 850px;
+}
+#line3 {
+  width: 5px;
+  height: 250px;
+  background-color: gray;
+  transform: rotate(-30deg);
+  position: fixed;
+  bottom: 150px;
+  right: 800px;
+}
+.triangle-outline {
+  scale: 3;
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 80px solid rgb(66, 66, 66);
+  position: relative;
+  transform: rotate(180deg);
+}
+
+.triangle-outline::after {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: -45px;
+  width: 0;
+  height: 0;
+  border-left: 45px solid transparent;
+  border-right: 45px solid transparent;
+  border-bottom: 70px solid #8cc461;
+}
+#paper {
+  width: 100px;
+  background-color: white;
+  height: 100px;
+  border-radius: 50%;
+  border: solid rgba(235, 181, 35, 0.801) 15px;
+  position: absolute;
+  bottom: 400px;
+  right: 65rem;
+  color: white;
+  font-size: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+#scissors {
+  width: 100px;
+  background-color: white;
+  height: 100px;
+  border-radius: 50%;
+  border: solid rgba(78, 35, 235, 0.801) 15px;
+  position: absolute;
+  bottom: 130px;
+  right: 890px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+#winscreen {
+  display: flex;
+  width: 60%;
+}
+#yourpick {
+  position: fixed;
+  top: 25px;
+  background-color: aqua;
+  z-index: 100;
+}
+
+/* layout css */
+header {
+  height: 7em;
+  display: flex;
+  justify-content: space-between;
+  margin: 50px 8em;
+  /* background-color: aqua; */
+  border: solid white;
+  border-radius: 20px;
+  font-size: 32px;
+  padding-left: 40px;
+  align-items: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  letter-spacing: 3px;
+  color: white;
+}
+main {
+  height: 34em;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#player {
+  width: 33%;
+  height: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+#winorlose {
+  width: 33%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  letter-spacing: 2px;
+  color: white;
+  font-size: 26px;
+  font-weight: 700;
+}
+#computer {
+  width: 33%;
+  height: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+#scorebox {
+  display: flex;
+}
+#playagain {
+  display: block;
+  background-color: white;
+  border: none;
+  width: 150px;
+  height: 50px;
+  border-radius: 7px;
+  color: #8cc461;
+  margin-top: 30px;
+  font-weight: 600;
+  cursor: pointer;
+}
+#playmain {
+  display: none;
+  width: 100%;
+}
+#computeroption {
+  width: 150px;
+  height: 150px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: solid red 15px;
+}
+#useroption {
+  width: 150px;
+  height: 150px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: solid red 15px;
+}
+#winstatus {
+  font-size: 34px;
+}
+#picked {
+  display: block;
+  text-align: center;
+  margin-bottom: 25px;
+  color: white;
+  font-size: 26px;
+  font-weight: 500;
+}
+.next {
+  display: none;
+}
+#hurray{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+#hurray h1{
+  color: white;
+  font-size: 96px;
+  letter-spacing: 20px;
+  padding: 0;
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+#hurray h2{
+  color: white;
+  font-size: 36px;
+  display: inline;
+  letter-spacing: 10px;
+  padding: 0;
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}

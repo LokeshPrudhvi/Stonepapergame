@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="fullgame">
+      <header>
+        <div id="scorecard">
+          <strong>ROCK<br />PAPER<br />SCISSORS</strong>
+        </div>
+        <div id="scorebox">
+          <div class="score">
+            <strong>COMPUTER SCORE</strong>
+            <h1 style="color: black" id="compscore">0</h1>
+          </div>
+          <div class="score">
+            <strong>YOUR<br />SCORE</strong>
+            <h1 style="color: black" id="userscore">0</h1>
+          </div>
+        </div>
+      </header>
+
+      <main id="playmain">
+        <div id="player">
+          <div id="picked">
+            <p>YOU PICKED</p>
+            <div id="useroption">
+              <img id="playersign" src="" alt="player choice" />
+            </div>
+          </div>
+        </div>
+        <div id="winorlose">
+          <span id="winstatus"></span>
+          <span id="againstpc">AGAINST PC</span>
+          <button id="playagain" onclick="playagain()">PLAY AGAIN</button>
+        </div>
+        <div id="computer">
+          <div id="picked">
+            <p>PC PICKED</p>
+            <div id="computeroption">
+              <img id="computersign" src="" alt="computer choice" />
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <main id="mainindex">
+        <div class="triangle-outline"></div>
+        <div id="rock" onclick="rock()">
+          <img src="images/Rock.png" alt="rock" />
+        </div>
+        <div id="paper" onclick="paper()">
+          <img src="images/paper.png" alt="paper" />
+        </div>
+        <div id="scissors" onclick="scissors()">
+          <img src="images/scissor.png" alt="scissors" />
+        </div>
+      </main>
+    </div>
+    <ul id="rules">
+      <div id="rulesclosebtn" onclick="hiderules()">x</div>
+      <h1>Game Rules</h1>
+      <li>Rock beats scissors, scissors beat paper, and paper beats rock.</li>
+      <li>
+        Agree ahead of time whether you’ll count off “rock, paper, scissors,
+        shoot” or just “rock, paper, scissors.”
+      </li>
+      <li>
+        Use rock, paper, scissors to settle minor decisions or simply play to
+        pass the tim
+      </li>
+
+      <li>
+        If both players lay down the same hand, each player lays down another
+        hand
+      </li>
+    </ul>
+    <div id="hurray">
+      <img src="images/Hurray.png" alt="" />
+      <h1 >HURRAY!!</h1>
+      <H2>YOU WON THE GAME</H2>
+      <button id="playagain" onclick="playagain()">PLAY AGAIN</button>
+    </div>
+    <footer>
+      <button class="rulesbtn next" onclick="nextbtn()">NEXT</button>
+      <button class="rulesbtn" onclick="showrules()">RULES</button>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
