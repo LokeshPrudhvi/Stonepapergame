@@ -100,7 +100,6 @@ function nextbtn() {
   hurray.style.display = "flex";
 }
 function restart() {
-    fullgame.style.display = "flex";
-  nextButton.style.display = "flex";
+  fullgame.style.display = "block";
   hurray.style.display = "none";
 }
